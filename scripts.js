@@ -21,7 +21,7 @@ function ValidUsername() {
   }
 
   // Check length requirement (SECOND PRIORITY)
-  if (username.length < 3 || username.length > 16) {
+  else if (username.length < 3 || username.length > 16) {
     usernameError.textContent = "사용자 이름은 3자에서 16자 사이여야 합니다";
     isValid = false;
   }
