@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 가입</title>
+  </head>
+  <body>
+    <form>
+      아이디<br />
+      <input
+        type="text"
+        id="username"
+        placeholder="아이디를 입력해주세요."
+        onblur="ValidUsername()"
+      /><br />
+      <div
+        id="usernameError"
+        style="color: rgb(255, 0, 0); display: none"
+      ></div>
+
+      비밀번호<br />
+      <input
+        type="text"
+        id="password1"
+        placeholder="비밀번호를 입력해주세요."
+        onblur="ValidPassword()"
+      /><br />
+      <div
+        id="passwordError"
+        style="color: rgb(255, 0, 0); display: none"
+      ></div>
+
+      비밀번호 확인<br />
+      <input
+        type="text"
+        id="password2"
+        placeholder="비밀번호를 다시 한 번 입력해주세요."
+      /><br />
+
+      전화번호<br />
+      <input type="text" id="phone" placeholder="01012345678" /><br />
+    </form>
+    <script src="scripts.js"></script>
+  </body>
+</html>
