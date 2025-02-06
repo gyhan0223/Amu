@@ -36,7 +36,12 @@
         type="text"
         id="password2"
         placeholder="비밀번호를 다시 한 번 입력해주세요."
+        onblur="ValidPasswordConfirmation()"
       /><br />
+      <div
+        id="password2Error"
+        style="color: rgb(255, 0, 0); display: none"
+      ></div>
 
       전화번호<br />
       <input

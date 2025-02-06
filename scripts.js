@@ -140,7 +140,30 @@ function isValidPassword() {
   return isValid;
 }
 
-function isValidPhoneNumber() {
+function ValidPasswordConfirmation() {
+  const password1 = document.getElementById("password1").value;
+  const password2 = document.getElementById("password2").value;
+  let password2Error = document.getElementById("password2Error");
+  let isValid = true;
+
+  if (password2 === "") {
+    password2Error.textContent = "비밀번호를 다시 한 번 입력해 주세요";
+    isValid = false;
+  } else if (password1 !== password2) {
+    password2Error.textContent = "비밀번호가 다릅니다.";
+    isValid = false;
+  }
+
+  if (isValid) {
+    password2Error.style.display = "none";
+  } else {
+    password2Error.style.display = "block";
+  }
+
+  return isValid;
+}
+
+function ValidPhoneNumber() {
   const phoneNumber = document.getElementById("phoneNumber").value;
   let phoneNumberError = document.getElementById("phoneNumberError");
   let isValid = true;
