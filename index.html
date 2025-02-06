@@ -12,7 +12,7 @@
         type="text"
         id="username"
         placeholder="아이디를 입력해주세요."
-        onblur="ValidUsername()"
+        onblur="isValidUsername()"
       /><br />
       <div
         id="usernameError"
@@ -24,7 +24,7 @@
         type="text"
         id="password1"
         placeholder="비밀번호를 입력해주세요."
-        onblur="ValidPassword()"
+        onblur="isValidPassword()"
       /><br />
       <div
         id="passwordError"
@@ -39,7 +39,17 @@
       /><br />
 
       전화번호<br />
-      <input type="text" id="phone" placeholder="01012345678" /><br />
+      <input
+        type="text"
+        id="phoneNumber"
+        placeholder="01012345678"
+        onblur="isValidPhoneNumber()"
+      /><br />
+
+      <div
+        id="phoneNumberError"
+        style="color: rgb(255, 0, 0); display: none"
+      ></div>
     </form>
     <script src="scripts.js"></script>
   </body>
