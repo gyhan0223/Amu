@@ -1,4 +1,4 @@
-function isValidUsername() {
+function ValidUsername() {
   const username = document.getElementById("username").value;
   let usernameError = document.getElementById("usernameError");
   let isValid = true;
@@ -42,7 +42,7 @@ function isValidUsername() {
   return isValid;
 }
 
-function isValidPassword() {
+function ValidPassword() {
   const password = document.getElementById("password1").value;
   let passwordError = document.getElementById("passwordError");
   let isValid = true;
@@ -187,4 +187,21 @@ function ValidPhoneNumber() {
   }
 
   return isValid;
+}
+
+function validateAndProceed() {
+  const isUsernameValid = ValidUsername();
+  const isPasswordValid = ValidPassword();
+  const isPasswordConfirmationValid = ValidPasswordConfirmation();
+  const isPhoneNumberValid = ValidPhoneNumber();
+
+  if (
+    isUsernameValid &&
+    isPasswordValid &&
+    isPasswordConfirmationValid &&
+    isPhoneNumberValid
+  ) {
+    // Navigate to the next page
+    window.location.href = "apartment.html";
+  }
 }

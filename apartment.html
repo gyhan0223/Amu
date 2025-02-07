@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아파트 이름 입력</title>
+  </head>
+  <body>
+    <form>
+      아파트 이름<br />
+      <input
+        type="text"
+        id="apartmentName"
+        placeholder="거주하고 있는 아파트 이름을 입력해주세요."
+      /><br />
+      <div
+        id="apartmentNameError"
+        style="color: rgb(255, 0, 0); display: none"
+      ></div>
+
+      <button type="button" onclick="submitApartmentName()">제출</button>
+    </form>
+    <script src="apartment.js"></script>
+  </body>
+</html>
